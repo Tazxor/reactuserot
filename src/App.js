@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App() {
+import Login from './vue/login';
+import SignUp from './vue/signup';
+import UpdateUser from './vue/updateuser';
+import ShowUser from './vue/showuser';
+import Navbar from './vue/navbar';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+    
+
+          <Route path="/vue/login" component={Login} />
+          <Route path="/vue/signup" component={SignUp} />
+          <Route path="/vue/updateUser" component={UpdateUser} />
+          <Route path="/vue/showUser" component={ShowUser} />
+
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
