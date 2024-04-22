@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const UserList = () => {
+const ShowUser = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -45,4 +45,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default ShowUser;
